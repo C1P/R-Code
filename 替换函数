@@ -1,0 +1,11 @@
+##替换函数；
+##a[b=="c"]这种方法会把数据转换成为character，常会出现错误
+
+x=sample(1:100,20)
+for (i in 1:length(x)){
+  if (x[i]>=70){x[i]="H"} else
+    if (x[i]<70 & x[i]>=40) {x[i]="M"}
+  else
+    if(x[i]>0&x[i]<40){x[i]="L"}
+} 
+
