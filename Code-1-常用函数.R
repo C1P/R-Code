@@ -1,12 +1,11 @@
-#####---lesson 1---#####
 
 ###-how to use help
 
-?mean                    # ´ò¿ªmean º¯ÊıµÄ°ïÖúÒ³Ãæ
-?"+"                     # ´ò¿ª¼Ó·¨²Ù×÷µÄ°ïÖúÒ³Ãæ
-?"if"                    # ´ò¿ªif µÄ°ïÖúÒ³Ãæ£¬ÓÃÓÚ·ÖÖ§´úÂë
-??plotting               # ËÑË÷ËùÓĞ°üº¬"plotting" µÄÖ÷Ìâ
-??"regression model"     # ËÑË÷ËùÓĞÓëregression model Ïà¹ØµÄÖ÷Ìâ
+?mean                    # æ‰“å¼€mean å‡½æ•°çš„å¸®åŠ©é¡µé¢
+?"+"                     # æ‰“å¼€åŠ æ³•æ“ä½œçš„å¸®åŠ©é¡µé¢
+?"if"                    # æ‰“å¼€if çš„å¸®åŠ©é¡µé¢ï¼Œç”¨äºåˆ†æ”¯ä»£ç 
+??plotting               # æœç´¢æ‰€æœ‰åŒ…å«"plotting" çš„ä¸»é¢˜
+??"regression model"     # æœç´¢æ‰€æœ‰ä¸regression model ç›¸å…³çš„ä¸»é¢˜
 
 help("mean")
 help("+")
@@ -20,7 +19,7 @@ apropos("z$")
 apropos("[4-9]")
 
 example(plot)
-demo() # ÁĞ³öËùÓĞÑİÊ¾
+demo() # åˆ—å‡ºæ‰€æœ‰æ¼”ç¤º
 demo(Japanese)
 
 browseVignettes()
@@ -43,13 +42,13 @@ floor(3.9)
 ceiling(3.1)
 sum(1:4)
 #.......#
-cos(c(0, pi / 4, pi / 2, pi))           #pi ÊÇÄÚÖÃ³£Êı
-exp(pi * 1i) + 1                        # Å·À­¹«Ê½
-factorial(5)                            #½×³Ë
-factorial(7) + factorial(1) - 71 ^ 2    #5041 ÊÇÒ»¸ö´óÊı×Ö
-choose(5, 0:5)                          #¶şÏîÊ½ÀïµÄc(n,k)
+cos(c(0, pi / 4, pi / 2, pi))           #pi æ˜¯å†…ç½®å¸¸æ•°
+exp(pi * 1i) + 1                        # æ¬§æ‹‰å…¬å¼
+factorial(5)                            #é˜¶ä¹˜
+factorial(7) + factorial(1) - 71 ^ 2    #5041 æ˜¯ä¸€ä¸ªå¤§æ•°å­—
+choose(5, 0:5)                          #äºŒé¡¹å¼é‡Œçš„c(n,k)
 
-#emp.1 prod()Á¬³Ëº¯Êı
+#emp.1 prod()è¿ä¹˜å‡½æ•°
 exactlyone<-function(p){
   notp<-1-p
   tot<-0.0
@@ -58,12 +57,12 @@ exactlyone<-function(p){
   return(tot)
 }
 
-#emp2. cumsum() ÀÛ»ıºÍand sumprod()ÀÛ¼Æ³Ë»ı
+#emp2. cumsum() ç´¯ç§¯å’Œand sumprod()ç´¯è®¡ä¹˜ç§¯
 x<-c(12,5,13)
 cumsum(x)
 cumprod(x)
 
-#emp.3 ×îĞ¡Öµ×î´óÖµ
+#emp.3 æœ€å°å€¼æœ€å¤§å€¼
 z<-matrix(c(1,2,5,3,6,2),nrow=3,byrow=T)
 min(z[,1],z[,2])
 pmin(z[,1],z[,2])
@@ -71,7 +70,7 @@ pmin(z[1,],z[2,],z[3,])
 nlm(function(x) return(x^2-sin(x)),8)
 optim()
 
-#emp.4 Î¢»ı·Ö
+#emp.4 å¾®ç§¯åˆ†
 D(expression(exp(x^2)),"x")
 integrate(function(x) x^2, 0, 1)
 
@@ -124,10 +123,10 @@ z <- rnorm(5);z
 x & y
 x | y
 
-#ÕæÖµ±í
-x <- c(TRUE, FALSE, NA) ¡¡¡¡¡¡   # Èı¸öÂß¼­Öµ
-xy <- expand.grid(x = x, y = x)  # È¡µÃx ºÍy µÄËùÓĞ×éºÏ
-within( # ÔÚxy ÄÚ¸³Öµ
+#çœŸå€¼è¡¨
+x <- c(TRUE, FALSE, NA) ã€€ã€€ã€€   # ä¸‰ä¸ªé€»è¾‘å€¼
+xy <- expand.grid(x = x, y = x)  # å–å¾—x å’Œy çš„æ‰€æœ‰ç»„åˆ
+within( # åœ¨xy å†…èµ‹å€¼
   xy,
 {
   and <- x & y
@@ -160,7 +159,7 @@ x
 order(x)
 (x<-x[order(x)])
 
-#order()Ó¦ÓÃÔÚÊı¾İ¿òÖĞÅÅĞò
+#order()åº”ç”¨åœ¨æ•°æ®æ¡†ä¸­æ’åº
 name<-c("aaa","bbb","ccc")
 data<-c(2,6,4)
 y<-data.frame(name, data);y
@@ -184,7 +183,7 @@ setequal(y,c(1,5,7))
 2 %in% x
 choose(5,3)
 
-#emp.1¶Ô³Æ²î
+#emp.1å¯¹ç§°å·®
 symdiff<-function(x,y){
   sdfxy<-setdiff(x,y)
   sdfyx<-setdiff(y,x)
@@ -194,7 +193,7 @@ x
 y
 symdiff(x,y)
 
-#emp.2ÅĞ¶Ï¼¯ºÏuÊÇ·ñÎªv×Ó¼¯
+#emp.2åˆ¤æ–­é›†åˆuæ˜¯å¦ä¸ºvå­é›†
 "%subsetof%"<-function(u,v){
   return(setequal(intersect(u,v),u))
 }
