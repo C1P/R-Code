@@ -174,11 +174,11 @@ rank(x)
 ###-sets
 x<-c(12,5,67,2,4,4)
 y<-c(1,2,5,95)
-union(x,y)
-intersect(x,y)
-setdiff(x,y)
+union(x,y) ##并集
+intersect(x,y)  ##交集
+setdiff(x,y)  ##x不在y中的
 setdiff(y,x)
-setequal(x,y)
+setequal(x,y) ##是否相等
 setequal(y,c(1,5,7))
 2 %in% x
 choose(5,3)
